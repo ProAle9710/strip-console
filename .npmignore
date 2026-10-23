@@ -1,0 +1,11 @@
+node_modules/
+reports/
+.strip-console-reports/
+*.log
+pnpm-lock.yaml
+package-lock.json
+.DS_Store
+.git/
+.vscode/
+.idea/
+*.tgz

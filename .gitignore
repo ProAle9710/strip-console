@@ -1,0 +1,6 @@
+node_modules/
+reports/
+.strip-console-reports/
+*.log
+*.tgz
+.DS_Store

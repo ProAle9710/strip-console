@@ -1,0 +1,60 @@
+{
+  "name": "@darkaegis/strip-console",
+  "version": "1.0.0",
+  "description": "CLI to strip console.* from JS/TS projects with language detection, dry-run and TXT reports",
+  "author": "Dark Aegis <proaleinfan9710@gmail.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "strip-console": "bin/strip-console.js",
+    "da-strip-console": "bin/strip-console.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "strip": "node bin/strip-console.js",
+    "dry": "node bin/strip-console.js --dry",
+    "prepack": "node -e \"require('fs').accessSync('bin/strip-console.js'); require('fs').accessSync('src/index.js')\"",
+    "pack:check": "npm pack --dry-run",
+    "publish:npm": "npm publish --access public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.0",
+    "@babel/traverse": "^7.26.0",
+    "@babel/types": "^7.26.0"
+  },
+  "keywords": [
+    "console",
+    "strip-console",
+    "remove-console",
+    "cleanup",
+    "javascript",
+    "typescript",
+    "cli",
+    "darkaegis",
+    "dry-run"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProAle9710/strip-console.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ProAle9710/strip-console/issues"
+  },
+  "homepage": "https://github.com/ProAle9710/strip-console#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
